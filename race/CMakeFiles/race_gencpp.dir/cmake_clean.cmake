@@ -1,5 +1,8 @@
+FILE(REMOVE_RECURSE
+  "CMakeFiles/race_gencpp"
+)
 
 # Per-language clean rules from dependency scanning.
-foreach(lang )
-  include(CMakeFiles/race_gencpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang)
+  INCLUDE(CMakeFiles/race_gencpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)
