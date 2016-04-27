@@ -37,27 +37,31 @@ def callback(data):
 		vel = 0
 	else:
 		vel = 8
-  """
-
-  #if getRange(data, 360) > 5: # Wide turn
-  #  error = -100
-  if getRange(data,180) > 5:
+  if getRange(data, 360) > 5: # Wide turn
+    error = -100
+  if getRange(data,360) > 5:
     error = 100
   else:
     b = 50
     c = 50
-    for i in range(181, 540):
+    for i in range(170, 450, 10):
       b2 = getRange(i)*math.cos(math.radians((i-180)/4))
       if b2<b:
         b = b2
         c = getRange(i)*math.sin(math.radians((i-180)/4))
 
-    error = (.5-b)/c
+    error = (b-.5)/c
+	"""
 
-  if(getRange(data,540)<.75):
-    vel = 0
-  else:
-    vel = 8
+	sum = 0
+	for i in range(180, 500, 10):
+		sum = sum + (getRange(data,i)*math.cos(math.radians((i-180)/4))-.5)/getRange(data,i)*math.sin(math.radians((i-180)/4))
+	error = sum / 36
+
+	if(getRange(data,540)<.75):
+		vel = 0
+	else:
+		vel = 8
 
 	msg = pid_input()
 	msg.pid_error = error
