@@ -67,8 +67,8 @@ set(race_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(race_SOURCE_PREFIX /home/ubuntu/Documents/race)
-  set(race_DEVEL_PREFIX /home/ubuntu/Documents/race/devel)
+  set(race_SOURCE_PREFIX /home/ubuntu/race)
+  set(race_DEVEL_PREFIX /home/ubuntu/race/devel)
   set(race_INSTALL_PREFIX "")
   set(race_PREFIX ${race_DEVEL_PREFIX})
 else()

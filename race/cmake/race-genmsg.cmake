@@ -2,7 +2,7 @@
 
 message(STATUS "race: 3 messages, 0 services")
 
-set(MSG_I_FLAGS "-Irace:/home/ubuntu/Documents/race/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Irace:/home/ubuntu/race/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -15,19 +15,19 @@ add_custom_target(race_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/ubuntu/Documents/race/msg/drive_values.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/race/msg/drive_param.msg" NAME_WE)
 add_custom_target(_race_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "race" "/home/ubuntu/Documents/race/msg/drive_values.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "race" "/home/ubuntu/race/msg/drive_param.msg" ""
 )
 
-get_filename_component(_filename "/home/ubuntu/Documents/race/msg/pid_input.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/race/msg/pid_input.msg" NAME_WE)
 add_custom_target(_race_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "race" "/home/ubuntu/Documents/race/msg/pid_input.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "race" "/home/ubuntu/race/msg/pid_input.msg" ""
 )
 
-get_filename_component(_filename "/home/ubuntu/Documents/race/msg/drive_param.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/race/msg/drive_values.msg" NAME_WE)
 add_custom_target(_race_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "race" "/home/ubuntu/Documents/race/msg/drive_param.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "race" "/home/ubuntu/race/msg/drive_values.msg" ""
 )
 
 #
@@ -37,19 +37,19 @@ add_custom_target(_race_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(race
-  "/home/ubuntu/Documents/race/msg/drive_values.msg"
+  "/home/ubuntu/race/msg/drive_param.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/race
 )
 _generate_msg_cpp(race
-  "/home/ubuntu/Documents/race/msg/pid_input.msg"
+  "/home/ubuntu/race/msg/pid_input.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/race
 )
 _generate_msg_cpp(race
-  "/home/ubuntu/Documents/race/msg/drive_param.msg"
+  "/home/ubuntu/race/msg/drive_values.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/race
@@ -69,11 +69,11 @@ add_custom_target(race_generate_messages_cpp
 add_dependencies(race_generate_messages race_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/Documents/race/msg/drive_values.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/race/msg/drive_param.msg" NAME_WE)
 add_dependencies(race_generate_messages_cpp _race_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/Documents/race/msg/pid_input.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/race/msg/pid_input.msg" NAME_WE)
 add_dependencies(race_generate_messages_cpp _race_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/Documents/race/msg/drive_param.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/race/msg/drive_values.msg" NAME_WE)
 add_dependencies(race_generate_messages_cpp _race_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -86,19 +86,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS race_generate_messages_cpp)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(race
-  "/home/ubuntu/Documents/race/msg/drive_values.msg"
+  "/home/ubuntu/race/msg/drive_param.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/race
 )
 _generate_msg_lisp(race
-  "/home/ubuntu/Documents/race/msg/pid_input.msg"
+  "/home/ubuntu/race/msg/pid_input.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/race
 )
 _generate_msg_lisp(race
-  "/home/ubuntu/Documents/race/msg/drive_param.msg"
+  "/home/ubuntu/race/msg/drive_values.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/race
@@ -118,11 +118,11 @@ add_custom_target(race_generate_messages_lisp
 add_dependencies(race_generate_messages race_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/Documents/race/msg/drive_values.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/race/msg/drive_param.msg" NAME_WE)
 add_dependencies(race_generate_messages_lisp _race_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/Documents/race/msg/pid_input.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/race/msg/pid_input.msg" NAME_WE)
 add_dependencies(race_generate_messages_lisp _race_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/Documents/race/msg/drive_param.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/race/msg/drive_values.msg" NAME_WE)
 add_dependencies(race_generate_messages_lisp _race_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -135,19 +135,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS race_generate_messages_lisp)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(race
-  "/home/ubuntu/Documents/race/msg/drive_values.msg"
+  "/home/ubuntu/race/msg/drive_param.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/race
 )
 _generate_msg_py(race
-  "/home/ubuntu/Documents/race/msg/pid_input.msg"
+  "/home/ubuntu/race/msg/pid_input.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/race
 )
 _generate_msg_py(race
-  "/home/ubuntu/Documents/race/msg/drive_param.msg"
+  "/home/ubuntu/race/msg/drive_values.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/race
@@ -167,11 +167,11 @@ add_custom_target(race_generate_messages_py
 add_dependencies(race_generate_messages race_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/Documents/race/msg/drive_values.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/race/msg/drive_param.msg" NAME_WE)
 add_dependencies(race_generate_messages_py _race_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/Documents/race/msg/pid_input.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/race/msg/pid_input.msg" NAME_WE)
 add_dependencies(race_generate_messages_py _race_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/Documents/race/msg/drive_param.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/race/msg/drive_values.msg" NAME_WE)
 add_dependencies(race_generate_messages_py _race_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

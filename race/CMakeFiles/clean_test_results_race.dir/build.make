@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/Documents/race
+CMAKE_SOURCE_DIR = /home/ubuntu/race
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/Documents/race
+CMAKE_BINARY_DIR = /home/ubuntu/race
 
 # Utility rule file for clean_test_results_race.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/Documents/race
 include CMakeFiles/clean_test_results_race.dir/progress.make
 
 CMakeFiles/clean_test_results_race:
-	/usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/remove_test_results.py /home/ubuntu/Documents/race/test_results/race
+	/usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/remove_test_results.py /home/ubuntu/race/test_results/race
 
 clean_test_results_race: CMakeFiles/clean_test_results_race
 clean_test_results_race: CMakeFiles/clean_test_results_race.dir/build.make
@@ -61,6 +61,6 @@ CMakeFiles/clean_test_results_race.dir/clean:
 .PHONY : CMakeFiles/clean_test_results_race.dir/clean
 
 CMakeFiles/clean_test_results_race.dir/depend:
-	cd /home/ubuntu/Documents/race && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/Documents/race /home/ubuntu/Documents/race /home/ubuntu/Documents/race /home/ubuntu/Documents/race /home/ubuntu/Documents/race/CMakeFiles/clean_test_results_race.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/race && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/race /home/ubuntu/race /home/ubuntu/race /home/ubuntu/race /home/ubuntu/race/CMakeFiles/clean_test_results_race.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results_race.dir/depend
 

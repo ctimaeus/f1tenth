@@ -54,8 +54,12 @@ def callback(data):
 	"""
 
 	sum = 0
+#	print(data.intensities[180])
 	for i in range(180, 500, 10):
-		sum = sum + (getRange(data,i)*math.cos(math.radians((i-180)/4))-.5)/getRange(data,i)*math.sin(math.radians((i-180)/4))
+    #if(data.intensities[i]<.9):
+		sum += (getRange(data,i)*math.cos(math.radians((i-180)/4))-.75)/getRange(data,i)*math.sin(math.radians((i-180)/4))
+    #else:
+    # sum = sum + (getRange(data,i)*math.cos(math.radians((i-180)/4))-.5-getRange(180)-getRange(900))/getRange(data,i)*math.sin(math.radians((i-180)/4))
 	error = sum / 36
 
 	if(getRange(data,540)<.75):

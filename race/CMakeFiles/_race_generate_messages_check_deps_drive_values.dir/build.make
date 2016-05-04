@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/Documents/race
+CMAKE_SOURCE_DIR = /home/ubuntu/race
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/Documents/race
+CMAKE_BINARY_DIR = /home/ubuntu/race
 
 # Utility rule file for _race_generate_messages_check_deps_drive_values.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/Documents/race
 include CMakeFiles/_race_generate_messages_check_deps_drive_values.dir/progress.make
 
 CMakeFiles/_race_generate_messages_check_deps_drive_values:
-	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py race /home/ubuntu/Documents/race/msg/drive_values.msg 
+	catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py race /home/ubuntu/race/msg/drive_values.msg 
 
 _race_generate_messages_check_deps_drive_values: CMakeFiles/_race_generate_messages_check_deps_drive_values
 _race_generate_messages_check_deps_drive_values: CMakeFiles/_race_generate_messages_check_deps_drive_values.dir/build.make
@@ -61,6 +61,6 @@ CMakeFiles/_race_generate_messages_check_deps_drive_values.dir/clean:
 .PHONY : CMakeFiles/_race_generate_messages_check_deps_drive_values.dir/clean
 
 CMakeFiles/_race_generate_messages_check_deps_drive_values.dir/depend:
-	cd /home/ubuntu/Documents/race && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/Documents/race /home/ubuntu/Documents/race /home/ubuntu/Documents/race /home/ubuntu/Documents/race /home/ubuntu/Documents/race/CMakeFiles/_race_generate_messages_check_deps_drive_values.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/race && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/race /home/ubuntu/race /home/ubuntu/race /home/ubuntu/race /home/ubuntu/race/CMakeFiles/_race_generate_messages_check_deps_drive_values.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/_race_generate_messages_check_deps_drive_values.dir/depend
 
