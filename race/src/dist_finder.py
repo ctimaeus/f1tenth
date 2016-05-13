@@ -19,7 +19,7 @@ def getRange(data,theta):
 # Do some error checking for NaN and ubsurd values
 ## Your code goes here
   distance = data.ranges[theta]
-  if math.isnan(distance) or distance > 50:
+  if math.isnan(distance) or distance > 1.5:
     distance = 50
   return distance
 
